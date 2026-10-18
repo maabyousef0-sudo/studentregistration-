@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل طالب جديد</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #263238;
+        }
+
+        header {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #004d40;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        form {
+            background: white;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #cccccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #00897b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #004d40;
+        }
+
+        footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>تسجيل طالب جديد</h1>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="register.html">تسجيل طالب جديد</a>
+    <a href="students.html">بيانات الطلاب</a>
+    <a href="contact.html">اتصل بنا</a>
+</nav>
+
+<form onsubmit="alert('تم إرسال النموذج التجريبي بنجاح!'); return false;">
+
+    <h2>بيانات الطالب</h2>
+
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name"
+           placeholder="أدخل اسم الطالب" required>
+
+    <label for="number">الرقم الجامعي:</label>
+    <input type="text" id="number" name="number"
+           placeholder="أدخل الرقم الجامعي" required>
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email"
+           placeholder="example@email.com" required>
+
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" name="phone"
+           placeholder="أدخل رقم الهاتف" required>
+
+    <label for="college">الكلية:</label>
+    <select id="college" name="college" required>
+        <option value="">اختاري الكلية</option>
+        <option>علوم الحاسوب</option>
+        <option>العلوم الرياضية</option>
+        <option>الاقتصاد</option>
+        <option>الهندسة</option>
+        <option>الطب</option>
+    </select>
+
+    <label for="level">المستوى الدراسي:</label>
+    <select id="level" name="level" required>
+        <option value="">اختاري المستوى</option>
+        <option>المستوى الأول</option>
+        <option>المستوى الثاني</option>
+        <option>المستوى الثالث</option>
+        <option>المستوى الرابع</option>
+    </select>
+
+    <button type="submit">إرسال بيانات التسجيل</button>
+
+</form>
+
+<footer>
+    <p>بوابة تسجيل الطلاب الجامعيين © 2026</p>
+</footer>
+
+</body>
+</html>

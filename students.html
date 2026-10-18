@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات الطلاب</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #263238;
+        }
+
+        header {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #004d40;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            background: white;
+            margin: 30px 15px;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 550px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #00897b;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #e0f2f1;
+        }
+
+        footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>بيانات الطلاب</h1>
+    <p>عرض معلومات الطلاب المسجلين</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="register.html">تسجيل طالب جديد</a>
+    <a href="students.html">بيانات الطلاب</a>
+    <a href="contact.html">اتصل بنا</a>
+</nav>
+
+<div class="container">
+
+    <h2>قائمة الطلاب</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>الرقم</th>
+                <th>اسم الطالب</th>
+                <th>الرقم الجامعي</th>
+                <th>الكلية</th>
+                <th>المستوى</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>أحمد محمد</td>
+                <td>2026001</td>
+                <td>علوم الحاسوب</td>
+                <td>الأول</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>سارة علي</td>
+                <td>2026002</td>
+                <td>العلوم الرياضية</td>
+                <td>الثاني</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>مريم حسن</td>
+                <td>2026003</td>
+                <td>الاقتصاد</td>
+                <td>الثالث</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>ملاحظة: البيانات المعروضة هنا تجريبية.</p>
+
+</div>
+
+<footer>
+    <p>بوابة تسجيل الطلاب الجامعيين © 2026</p>
+</footer>
+
+</body>
+</html>
+
+    

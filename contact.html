@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #263238;
+        }
+
+        header {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #004d40;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .card {
+            background: white;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #cccccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #00897b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>اتصل بنا</h1>
+    <p>يسعدنا استقبال استفساراتكم</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="register.html">تسجيل طالب جديد</a>
+    <a href="students.html">بيانات الطلاب</a>
+    <a href="contact.html">اتصل بنا</a>
+</nav>
+
+<div class="card">
+
+    <h2>تواصل معنا</h2>
+
+    <p>إذا كان لديك استفسار، يمكنك تعبئة النموذج أدناه.</p>
+
+    <form onsubmit="alert('تم إرسال الرسالة التجريبية بنجاح!'); return false;">
+
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">الرسالة:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">إرسال الرسالة</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>بوابة تسجيل الطلاب الجامعيين © 2026</p>
+</footer>
+
+</body>
+</html>
