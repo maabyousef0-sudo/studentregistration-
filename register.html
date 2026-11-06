@@ -1,148 +1,110 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسجيل طالب جديد</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f4f8;
-            margin: 0;
-            color: #263238;
-        }
-
-        header {
-            background: #00695c;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            background: #004d40;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            color: yellow;
-        }
-
-        form {
-            background: white;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px #cccccc;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 7px;
-            box-sizing: border-box;
-            border: 1px solid #aaa;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 20px;
-            background: #00897b;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #004d40;
-        }
-
-        footer {
-            background: #004d40;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
     <h1>تسجيل طالب جديد</h1>
-</header>
 
-<nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="register.html">تسجيل طالب جديد</a>
-    <a href="students.html">بيانات الطلاب</a>
-    <a href="contact.html">اتصل بنا</a>
-</nav>
+    <hr>
 
-<form onsubmit="alert('تم إرسال النموذج التجريبي بنجاح!'); return false;">
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="register.html">تسجيل طالب</a>
+        <a href="students.html">بيانات الطلاب</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
 
-    <h2>بيانات الطالب</h2>
+    <hr>
 
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" name="name"
-           placeholder="أدخل اسم الطالب" required>
+    <h2>نموذج التسجيل الجامعي</h2>
 
-    <label for="number">الرقم الجامعي:</label>
-    <input type="text" id="number" name="number"
-           placeholder="أدخل الرقم الجامعي" required>
+    <div id="message" class="message" hidden></div>
 
-    <label for="email">البريد الإلكتروني:</label>
-    <input type="email" id="email" name="email"
-           placeholder="example@email.com" required>
+    <form id="registerForm" action="#" method="post">
 
-    <label for="phone">رقم الهاتف:</label>
-    <input type="tel" id="phone" name="phone"
-           placeholder="أدخل رقم الهاتف" required>
+        <label for="fullname">الاسم الكامل:</label>
+        <input type="text" id="fullname" name="fullname" required>
 
-    <label for="college">الكلية:</label>
-    <select id="college" name="college" required>
-        <option value="">اختاري الكلية</option>
-        <option>علوم الحاسوب</option>
-        <option>العلوم الرياضية</option>
-        <option>الاقتصاد</option>
-        <option>الهندسة</option>
-        <option>الطب</option>
-    </select>
+        <br><br>
 
-    <label for="level">المستوى الدراسي:</label>
-    <select id="level" name="level" required>
-        <option value="">اختاري المستوى</option>
-        <option>المستوى الأول</option>
-        <option>المستوى الثاني</option>
-        <option>المستوى الثالث</option>
-        <option>المستوى الرابع</option>
-    </select>
+        <label for="student_id">الرقم الجامعي:</label>
+        <input type="text" id="student_id" name="student_id" required>
 
-    <button type="submit">إرسال بيانات التسجيل</button>
+        <br><br>
 
-</form>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email">
 
-<footer>
-    <p>بوابة تسجيل الطلاب الجامعيين © 2026</p>
-</footer>
+        <br><br>
 
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <br><br>
+
+        <label>الجنس:</label>
+        <input type="radio" name="gender" value="male"> ذكر
+        <input type="radio" name="gender" value="female"> أنثى
+
+        <br><br>
+
+        <label for="college">الكلية:</label>
+        <select id="college" name="college" required>
+            <option value="">اختاري الكلية</option>
+            <option value="computer">علوم الحاسوب</option>
+            <option value="science">العلوم</option>
+            <option value="economics">الاقتصاد</option>
+            <option value="engineering">الهندسة</option>
+            <option value="medicine">الطب</option>
+        </select>
+
+        <br><br>
+
+        <label for="specialization">التخصص:</label>
+        <input type="text" id="specialization" name="specialization" required>
+
+        <br><br>
+
+        <label for="level">المستوى الدراسي:</label>
+        <select id="level" name="level">
+            <option value="">اختاري المستوى</option>
+            <option value="1">المستوى الأول</option>
+            <option value="2">المستوى الثاني</option>
+            <option value="3">المستوى الثالث</option>
+            <option value="4">المستوى الرابع</option>
+            <option value="5">المستوى الخامس</option>
+        </select>
+
+        <br><br>
+
+        <label for="birthdate">تاريخ الميلاد:</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+        <br><br>
+
+        <input type="submit" value="إرسال التسجيل">
+        <input type="reset" value="مسح البيانات">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <a href="students.html">عرض بيانات الطلاب</a>
+    </p>
+
+    <p>
+        <a href="index.html">العودة إلى الصفحة الرئيسية</a>
+    </p>
+
+    <script src="script.js"></script>
 </body>
 </html>
